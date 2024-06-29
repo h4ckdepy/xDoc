@@ -20,14 +20,25 @@ app.js修改
 
 ```
 api : 数据源API
-
 loginapi : 处理登录逻辑的API
-
 ```
 
-数据渲染格式请参考 https://api.rce.ink/ 的文档，目前仅使用文章加密审批、文章列表、文章详情、租户信息四个接口。
+数据渲染格式请参考 https://api.rce.ink/ 的文档，目前仅使用文章加密审批、文章列表、文章详情、租户信息四个接口.
 
-若您是DepyDocs的租户,请修改成您自己的服务器地址后,在服务端追加自己的accessToken,逻辑自行实现。后续只需要反向代理到DepyDocs API即可，其余代码无需变动。（请勿在app.js中的at填写,此处为开发环境使用）
+#### 租户使用
+
+若您是DepyDocs的租户,请先使用个人域名进行流量转发,并追加自己的AccessToken.
+
+例如:[https://a.com] 流量转发至 [https://docs.test.rce.ink/index/openapi?accesstoken=YourToken],然后将https://a.com添入app.js的api处即可.
+
+AccessToken获取参考API文档,追加逻辑自行实现.
+
+**（请勿在app.js中的at填写,此处为开发环境使用）**
+
+## 小程序上架
+
+1.wx.request需要配置小程序可信域,可信域又需要进行icp备案
+2.原包我已精简小于2m,clone后使用微信开发者工具上传即可
 
 ## 本项目使用到的框架
 
