@@ -47,3 +47,12 @@ AccessToken获取参考 https://api.rce.ink/view/?view_id=182 ,追加逻辑自�
 
 1、colorui
 2、towxml
+
+
+## 预览
+
+![image](https://github.com/h4ckdepy/xDoc/assets/42985524/58f9b908-8492-4cde-a0ac-6dcba201a437)
+
+![image](https://github.com/h4ckdepy/xDoc/assets/42985524/5f317c5e-342a-41f9-bece-01a697fedeb4)
+
+
