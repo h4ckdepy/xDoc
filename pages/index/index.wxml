@@ -1,0 +1,11 @@
+
+<ui-sys doc title="DepyDocs授权">
+    <view class="ui-container">
+        <!-- 简介 -->
+        <ui-title title="DepyDocs授权" depth="2" isIcon/>
+        <view class="p-4">
+          <button class="ui-btn block {{buttonClass}} shadow shadow-blue" bindtap="loginReq" disabled="{{buttonDisabled}}">{{buttonText}}</button>
+      </view>
+    </view>
+</ui-sys>
+

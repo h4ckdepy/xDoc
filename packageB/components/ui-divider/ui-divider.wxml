@@ -1,0 +1,8 @@
+<view class="ui-divider-box {{ui}}">
+    <view class="ui-divider" style="{{style}}">
+        <view class="ui-divider-line {{cssVal?cssVal:''}} {{align==='left'?'left':''}} {{bg}}"/>
+        <view class="ui-divider-title {{color}}" wx:if="{{title}}">{{title}}</view>
+        <view wx:else><slot></slot></view>
+        <view class="ui-divider-line {{cssVal?cssVal:''}} {{align==='right'?'right':''}} {{bg}}"/>
+    </view>
+</view>

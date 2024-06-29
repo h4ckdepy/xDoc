@@ -1,0 +1,191 @@
+<ui-sys doc title="布局">
+    <view class="ui-container">
+
+        <ui-title title="简介" depth="2" ui="m-2" isIcon/>
+        <view class="paragraph">通过 row 和 col 组件，并通过 col 组件的 span 属性我们就可以自由地组合布局。</view>
+
+        <ui-title title="基础布局" depth="2" ui="m-2" isIcon/>
+        <view class="m-2 text-center">
+            <ui-row>
+                <ui-col>
+                    <view class="ui-BG-Main-1 p-3 radius">24/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2">
+                <ui-col span="12">
+                    <view class="ui-BG-Main-2 p-3 radius">12/24</view>
+                </ui-col>
+                <ui-col span="12">
+                    <view class="ui-BG-Main-4 p-3 radius">12/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2">
+                <ui-col span="8">
+                    <view class="ui-BG-Main-4 p-3 radius">8/24</view>
+                </ui-col>
+                <ui-col span="8">
+                    <view class="ui-BG-Main-3 p-3 radius">8/24</view>
+                </ui-col>
+                <ui-col span="8">
+                    <view class="ui-BG-Main-4 p-3 radius">8/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2">
+                <ui-col span="6">
+                    <view class="ui-BG-Main-3 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-3 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+            </ui-row>
+        </view>
+
+        <ui-title title="分栏间隔" depth="2" ui="m-2 mt-5" isIcon/>
+        <view class="m-2 text-center">
+            <ui-row ui="mt-2" spacing="20">
+                <ui-col span="6">
+                    <view class="ui-BG-Main-3 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-3 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-3 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-3 p-3 radius">6/24</view>
+                </ui-col>
+            </ui-row>
+        </view>
+
+        <ui-title title="混合布局" depth="2" ui="m-2 mt-5" isIcon/>
+        <view class="m-2 text-center">
+            <ui-row ui="mt-2" spacing="20">
+                <ui-col span="16">
+                    <view class="ui-BG-Main-4 p-3 radius">16/24</view>
+                </ui-col>
+                <ui-col span="8">
+                    <view class="ui-BG-Main-4 p-3 radius">8/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2" spacing="20">
+                <ui-col span="8">
+                    <view class="ui-BG-Main-4 p-3 radius">8/24</view>
+                </ui-col>
+                <ui-col span="8">
+                    <view class="ui-BG-Main-4 p-3 radius">8/24</view>
+                </ui-col>
+                <ui-col span="4">
+                    <view class="ui-BG-Main-4 p-3 radius">4/24</view>
+                </ui-col>
+                <ui-col span="4">
+                    <view class="ui-BG-Main-4 p-3 radius">4/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2" spacing="20">
+                <ui-col span="4">
+                    <view class="ui-BG-Main-4 p-3 radius">4/24</view>
+                </ui-col>
+                <ui-col span="16">
+                    <view class="ui-BG-Main-4 p-3 radius">16/24</view>
+                </ui-col>
+                <ui-col span="4">
+                    <view class="ui-BG-Main-4 p-3 radius">4/24</view>
+                </ui-col>
+            </ui-row>
+        </view>
+
+        <ui-title title="对齐方式" depth="2" ui="m-2 mt-5" isIcon/>
+        <view class="m-2 text-center">
+            <ui-row ui="mt-2 bg-white radius" spacing="20">
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2 mt-3 bg-white radius" spacing="20" align="center">
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2 mt-3 bg-white radius" spacing="20" align="end">
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2 mt-3 bg-white radius" spacing="20" align="space-between">
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2 mt-3 bg-white radius" spacing="20" align="space-around">
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+                <ui-col span="6">
+                    <view class="ui-BG-Main-4 p-3 radius">6/24</view>
+                </ui-col>
+            </ui-row>
+        </view>
+
+        <ui-title title="布局对比" depth="2" ui="m-2 mt-5" isIcon/>
+        <view class="paragraph">通过 row 组件，设置 col 参数，来设置24分栏，还是12分栏，默认为24分栏。</view>
+        <view class="m-2 text-center">
+            <ui-row ui="mt-2" spacing="20">
+                <ui-col span="4">
+                    <view class="ui-BG-Main-4 p-3 radius">4/24</view>
+                </ui-col>
+                <ui-col span="20">
+                    <view class="ui-BG-Main-4 p-3 radius">20/24</view>
+                </ui-col>
+            </ui-row>
+            <ui-row ui="mt-2" spacing="20" col="12">
+                <ui-col span="4">
+                    <view class="ui-BG-Main-4 p-3 radius">4/12</view>
+                </ui-col>
+                <ui-col span="8">
+                    <view class="ui-BG-Main-4 p-3 radius">8/12</view>
+                </ui-col>
+            </ui-row>
+        </view>
+
+    </view>
+
+    <view class="mp-ad-container">
+        <view class="shadow">
+            <ad unit-id="adunit-5cbb45ce88fe9fd7"></ad>
+        </view>
+    </view>
+</ui-sys>

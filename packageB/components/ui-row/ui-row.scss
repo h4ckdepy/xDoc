@@ -1,0 +1,17 @@
+.ui-grid{
+    &.ui-grid-align-start {
+        justify-content: start;
+    }
+    &.ui-grid-align-center {
+        justify-content: center;
+    }
+    &.ui-grid-align-end {
+        justify-content: flex-end;
+    }
+    &.ui-grid-align-space-between {
+        justify-content: space-between;
+    }
+    &.ui-grid-align-space-around {
+        justify-content: space-around;
+    }
+}

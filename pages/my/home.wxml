@@ -1,0 +1,21 @@
+<ui-sys img="/static/img/4put2.png" tabbar>
+    <ui-navbar back="{{false}}" isSlot opacity scrollTop="{{scrollTop}}">
+        <view class="flex-center flex-sub" wx:if="{{scrollTop > sys_navBar}}">我的</view>
+    </ui-navbar>
+    <view class="ui-container">
+        <view class="flex-bar my-4" data-url="/pages/demo/login/login" bindtap="tapToUrl">
+            <ui-avatar ui="xxl ellipse" src="{{tenant_avatar}}"/>
+            <view class="flex-sub pl-3">
+                <view class="text-xl">{{tenant_blogname}}</view>
+            </view>
+        </view>
+        <ui-menu ui="mt-5 radius border">
+            <ui-menu-item arrow title="{{tenant_github}}" icon="cicon-github-circle"/>
+        </ui-menu>
+    </view>
+<!-- 
+    <view class="mp-ad-container">
+      <rich-text nodes="{{richTextNodes}}"></rich-text>
+    </view> -->
+</ui-sys>
+

@@ -1,0 +1,33 @@
+<view class="ui-stepper-box {{tpl > 0 && tpl < 5?'stepper-tpl-'+tpl:''}} {{theme?'stepper-theme-'+theme:''}} {{uiBox}}">
+    <view class="ui-stepper {{bg}} {{ui}}" wx:if="{{tpl!=3}}">
+        <view class="stepper-reduce {{bgCut}} {{uiCut}} {{noCut?'disabled':''}}" bindtap="tapReduce" wx:if="{{tpl!=4}}">
+            <text class="_icon-move stepper-icon"/>
+        </view>
+        <view class="stepper-addition {{bgAdd}} {{uiAdd}} {{noAdd?'disabled':''}}" bindtap="tapAddition" wx:else>
+            <text class="_icon-add stepper-icon"/>
+        </view>
+        <view class="stepper-input-view {{bgVal}} {{uiVal}} {{noVal?'disabled':''}}" wx:if="{{tpl!=2}}">
+            <input class="stepper-input" type="{{digit?'digit':'number'}}" value="{{num}}" disabled="{{noVal}}" bindinput="inputNum"/>
+        </view>
+        <view class="stepper-line" wx:else/>
+        <view class="stepper-addition {{bgAdd}} {{uiAdd}} {{noAdd?'disabled':''}}" bindtap="tapAddition" wx:if="{{tpl!=4}}">
+            <text class="_icon-add stepper-icon"/>
+        </view>
+        <view class="stepper-reduce {{bgCut}} {{uiCut}} {{noCut?'disabled':''}}" bindtap="tapReduce" wx:else>
+            <text class="_icon-move stepper-icon"/>
+        </view>
+    </view>
+    <view class="ui-stepper {{bg}}" wx:else>
+        <view class="stepper-input-view {{bgVal}} {{uiVal}} {{noVal?'disabled':''}}">
+            <input class="stepper-input" type="{{digit?'digit':'number'}}" value="{{num}}" disabled="{{noVal}}" bindinput="inputNum"/>
+        </view>
+        <view class="stepper-btn-view">
+            <view class="stepper-addition {{bgAdd}} {{uiAdd}} {{noAdd?'disabled':''}}" bindtap="tapAddition">
+                <text class="_icon-add stepper-icon"/>
+            </view>
+            <view class="stepper-reduce {{bgCut}} {{uiCut}} {{noCut?'disabled':''}}" bindtap="tapReduce">
+                <text class="_icon-move stepper-icon"/>
+            </view>
+        </view>
+    </view>
+</view>

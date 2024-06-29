@@ -1,0 +1,11 @@
+<ui-sys doc title="{{title}}">
+    <view class="ui-container">
+        <!-- 简介 -->
+        <ui-title title="{{title}}" depth="2" isIcon/>
+        <view class="container" >
+          <towxml nodes="{{article}}"/>
+        </view>
+    </view>
+
+
+</ui-sys>

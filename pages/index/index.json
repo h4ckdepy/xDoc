@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "app-nav-li": "/mp-sdk/components/app-nav-li/app-nav-li",
+      "ui-loading": "/mp-cu/colorUI/components/ui-loading/ui-loading"
+  }
+}

@@ -1,0 +1,63 @@
+<ui-sys doc title="点标签">
+    <view class="ui-container">
+
+        <ui-title title="点标签" depth="2" ui="m-2" isIcon/>
+        <view class="paragraph">常见于在图片上的标签。</view>
+
+        <view class="m-2 img-dot-tag">
+            <ui-img ui="radius border" src="{{imgA}}"/>
+
+            <ui-dot-tag name="ColorUI" ui="dot-tag-right" animation right bind:tagTap="tapDotTag"/>
+
+            <ui-dot-tag ui="dot-tag-bottom" animation bottom bind:tagTap="tapDotTag">
+                <text class="cicon-creative"/>
+                <text class="ml-2">加点图标</text>
+            </ui-dot-tag>
+
+            <ui-dot-tag name="组件库" ui="dot-tag-top" animation top bind:tagTap="tapDotTag"/>
+
+            <ui-dot-tag name="MP-CU" ui="dot-tag-left" animation left bind:tagTap="tapDotTag"/>
+        </view>
+
+        <ui-title title="尺寸" depth="2" ui="m-2 mt-5" isIcon/>
+        <view class="m-2 img-dot-tag">
+            <ui-img ui="radius border" src="{{imgB}}"/>
+
+            <ui-dot-tag name="组件库" ui="dot-tag-right lg" animation right/>
+
+            <ui-dot-tag name="点标签点标签" ui="dot-tag-bottom xxl" animation bottom/>
+
+            <ui-dot-tag name="MP-CU" ui="dot-tag-top" animation top/>
+
+            <ui-dot-tag name="ColorUI" ui="dot-tag-left sm" animation left/>
+        </view>
+
+        <ui-title title="拖动" depth="2" ui="m-2 mt-5" isIcon/>
+        <view class="paragraph">采用了微信官方的 movable-area、movable-view 容器搭配实现的拖动效果</view>
+
+        <view class="m-2 img-dot-tag">
+            <!-- movable-area参考文档：https://developers.weixin.qq.com/miniprogram/dev/component/movable-area.html -->
+            <movable-area style="width: 100%; height: 154px;">
+                <ui-img ui="radius border" src="{{imgC}}"/>
+                <movable-view x="{{x}}" y="{{y}}" direction="all" style="height: auto;width: auto;" bindchange="movableChange">
+                    <ui-dot-tag name="拖动" animation right/>
+                </movable-view>
+            </movable-area>
+        </view>
+
+        <ui-title title="坐标" depth="2" ui="m-2 mt-5" isIcon/>
+        <view class="paragraph">有x，y坐标参数，可以根据拖动的参数，设置标签所在的位置，如果发现点，有偏移，可使用 dot="{{0}}" 设置偏移量</view>
+
+        <view class="m-2 img-dot-tag">
+            <ui-img ui="radius border" src="{{imgD}}"/>
+            <ui-dot-tag name="坐标" x="{{x}}" y="{{y}}" dot="1" animation right/>
+        </view>
+
+    </view>
+
+    <view class="mp-ad-container">
+        <view class="shadow">
+            <ad unit-id="adunit-5cbb45ce88fe9fd7"></ad>
+        </view>
+    </view>
+</ui-sys>

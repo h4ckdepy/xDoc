@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ui-row" : "/packageB/components/ui-row/ui-row",
+    "ui-col" : "/packageB/components/ui-col/ui-col"
+  }
+}

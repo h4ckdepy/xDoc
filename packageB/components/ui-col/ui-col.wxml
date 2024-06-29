@@ -1,0 +1,3 @@
+<view class="ui-col {{uiColVal}} {{bg}} {{ui}}" style="{{styleValue}}">
+    <slot></slot>
+</view>

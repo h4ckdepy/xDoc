@@ -1,0 +1,4 @@
+<view class="ui-notify {{show?'show':''}} {{bg}} {{ui}}" style="{{style}}" bindtap="onMsgTap">
+    <text class="{{icon}} ui-notify-icon" wx:if="{{icon}}"/> {{msg}}
+</view>
+<view class="ui-notify-mask {{maskBg}} {{show?'show':''}}" bindtap="onMaskTap" wx:if="{{mask}}"/>

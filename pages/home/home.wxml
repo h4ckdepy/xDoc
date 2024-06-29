@@ -1,0 +1,29 @@
+<ui-sys img="/static/img/4put2.png" tabbar>
+    <ui-navbar back="{{false}}" isSlot opacity scrollTop="{{scrollTop}}">
+        <view class="flex-bar">
+            <view style="{{'width:'+ (sys_capsule.width + 10)+'px; height:' + sys_capsule.height+'px'}}"/>
+        </view>
+    </ui-navbar>
+    <ui-swiper info="{{swiperList}}" height="48vw" dotStyle="line" dotCur="ui-BG-Main"/>
+
+    <view class="ui-container">
+        <ui-title title="文章列表" depth="2" isIcon ui="ml-3"/>
+        <view class="ui-cards goods col-goods">
+            <view class="ui-item" wx:for="{{list}}" wx:key="index" data-jumpurl="{{item.jumpurl}}" data-title="{{item.title}}" data-pass="{{item.pass}}" data-id="{{item.tenantarticle_id}}" bindtap="toArticleDetail">
+                <view class="content">
+                  <block wx:if="{{!item.pass}}">
+                    <view class="text-cut text-lg text-bold">[{{ item.category }}] - {{ item.title }}</view>
+                    <view class="text-right text-grey p-3">{{item.create_time}}</view>
+                  </block>
+                  <block wx:else>
+                    <view class="text-cut text-lg text-bold">🔒 - [{{ item.category }}] - {{ item.title }}</view>
+                    <view class="text-right text-grey p-3">{{item.create_time}}</view>
+                  </block>   
+                </view>
+            </view>
+        </view>
+    </view>
+    
+    <ui-loading size="lg" color="text-blue" class="loading-center" wx:if="{{isLoading}}"/>
+
+</ui-sys>

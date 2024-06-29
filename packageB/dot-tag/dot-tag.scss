@@ -1,0 +1,23 @@
+.img-dot-tag {
+    position: relative;
+    .dot-tag-left {
+        position: absolute;
+        bottom: 50rpx;
+        right: 30rpx;
+    }
+    .dot-tag-top {
+        position: absolute;
+        bottom: 20rpx;
+        left: 170rpx;
+    }
+    .dot-tag-right {
+        position: absolute;
+        top: 50rpx;
+        left: 20rpx;
+    }
+    .dot-tag-bottom {
+        position: absolute;
+        top: 20rpx;
+        left: 280rpx;
+    }
+}

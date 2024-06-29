@@ -1,0 +1,18 @@
+ui-stepper {
+    display: inline-block;
+}
+ui-stepper + ui-stepper {
+    margin-left: 10rpx;
+}
+.stepper-content {
+    position: relative;
+    .color-dot {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 45rpx;
+        height: 45rpx;
+        background-image: linear-gradient(45deg,#f4e3f7,#ed1c24);
+        border-radius: 0 15rpx 0 100rpx;
+    }
+}

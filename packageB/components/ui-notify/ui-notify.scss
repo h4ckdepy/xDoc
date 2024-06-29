@@ -1,0 +1,38 @@
+.ui-notify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+    opacity: 0;
+    font-size: 26rpx;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 30rpx;
+    transform: translateZ(0) translateY(-100%);
+    transition: all .3s ease-in-out;
+    .ui-notify-icon {
+        margin-right: 10rpx;
+    }
+    &.show {
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+.ui-notify-mask {
+    position: fixed;
+    z-index: 99998;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+}

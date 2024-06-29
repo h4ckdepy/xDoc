@@ -1,0 +1,468 @@
+.ui-stepper-box {
+    position: relative;
+    display: inline-block;
+    &.stepper-tpl-1 {
+        .ui-stepper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 10rpx;
+            border-radius: 10rpx;
+            .stepper-input-view {
+                position: relative;
+                width: 64rpx;
+                height: 60rpx;
+                margin: 0 5rpx;
+                text-align: center;
+                border-radius: 10rpx;
+                .stepper-input {
+                    width: 60rpx;
+                    height: 58rpx;
+                    margin: 0;
+                    color: #3E3E3E;
+                    border-radius: 10rpx;
+                    font-weight: bold;
+                }
+                &.disabled {
+                    opacity: 1;
+                    cursor: inherit !important;
+                }
+            }
+            .stepper-reduce, .stepper-addition {
+                position: relative;
+                width: 60rpx;
+                height: 60rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10rpx;
+                .stepper-icon {
+                    font-size: 33rpx;
+                }
+                &:not(.disabled):active {
+                    transform: translate(.5px, .5px);
+                }
+                &.disabled {
+                    opacity: 0.4;
+                    cursor: not-allowed;
+                }
+            }
+        }
+        &.stepper-theme-default {
+            .ui-stepper {
+                background: #FFFFFF;
+                .stepper-input-view .stepper-input {
+                    color: #3E3E3E;
+                }
+                .stepper-reduce {
+                    background-color: #FDE7E7;
+                    color: #910C09;
+                }
+                .stepper-addition {
+                    background-color: #E2F8E3;
+                    color: #145D17;
+                }
+            }
+        }
+        &.stepper-theme-no-bg {
+            .ui-stepper {
+                .stepper-input-view {
+                    background: #FFFFFF;
+                    border: 1rpx solid #B8B7B7;
+                    .stepper-input {
+                        color: #414141;
+                    }
+                }
+                .stepper-reduce {
+                    color: #910A09;
+                }
+                .stepper-addition {
+                    color: #145D17;
+                }
+            }
+        }
+        &.stepper-theme-grey {
+            .ui-stepper {
+                background-color: #EFEFF0;
+                .stepper-input-view {
+                    background: #FFFFFF;
+                    border: 1rpx solid #BABABA;
+                    .stepper-input {
+                        color: #414141;
+                    }
+                }
+                .stepper-reduce {
+                    color: #910A07;
+                }
+                .stepper-addition {
+                    color: #145D17;
+                }
+            }
+        }
+        &.stepper-theme-blue {
+            .ui-stepper {
+                background-color: #DFEBF9;
+                .stepper-input-view {
+                    background: #FFFFFF;
+                    border: 1rpx solid #7DB3F7;
+                    .stepper-input {
+                        color: #053775;
+                    }
+                }
+                .stepper-reduce {
+                    color: #0E56B3;
+                }
+                .stepper-addition {
+                    color: #0E56B3;
+                }
+            }
+        }
+    }
+    &.stepper-tpl-2 {
+        .ui-stepper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 10rpx;
+            border-radius: 10rpx;
+            .stepper-line {
+                background: #DEDEDE;
+                width: 4rpx;
+                height: 45rpx;
+                margin: 0 20rpx;
+                border-radius: 10rpx;
+            }
+            .stepper-reduce, .stepper-addition {
+                position: relative;
+                width: 60rpx;
+                height: 60rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10rpx;
+                .stepper-icon {
+                    font-size: 33rpx;
+                }
+                &:not(.disabled):active {
+                    transform: translate(.5px, .5px);
+                }
+                &.disabled {
+                    opacity: 0.4;
+                    cursor: not-allowed;
+                }
+            }
+        }
+        &.stepper-theme-default {
+            .ui-stepper {
+                background: #FFFFFF;
+                .stepper-line {
+                    background: #E1E1E1;
+                }
+                .stepper-reduce {
+                    background-color: #FDE7E7;
+                    color: #910C09;
+                }
+                .stepper-addition {
+                    background-color: #E2F8E3;
+                    color: #145D17;
+                }
+            }
+        }
+        &.stepper-theme-no-bg {
+            .ui-stepper {
+                .stepper-line {
+                    background: #E1E1E1;
+                }
+                .stepper-reduce {
+                    color: #910A09;
+                }
+                .stepper-addition {
+                    color: #145D17;
+                }
+            }
+        }
+        &.stepper-theme-grey {
+            .ui-stepper {
+                background-color: #EFEFF0;
+                .stepper-line {
+                    background: #E1E1E1;
+                }
+                .stepper-reduce {
+                    color: #910A07;
+                }
+                .stepper-addition {
+                    color: #145D17;
+                }
+            }
+        }
+        &.stepper-theme-blue {
+            .ui-stepper {
+                background-color: #DFEBF9;
+                .stepper-line {
+                    background: #C7DDFA;
+                }
+                .stepper-reduce {
+                    color: #0E56B3;
+                }
+                .stepper-addition {
+                    color: #0E56B3;
+                }
+            }
+        }
+    }
+    &.stepper-tpl-3 {
+        //top: -5rpx;
+        .ui-stepper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 10rpx;
+            border-radius: 10rpx;
+            .stepper-input-view {
+                position: relative;
+                width: 119rpx;
+                height: 60rpx;
+                margin: 0 10rpx 0 5rpx;
+                text-align: left;
+                border-radius: 10rpx;
+                .stepper-input {
+                    padding: 0 20rpx;
+                    height: 58rpx;
+                    margin: 0;
+                    color: #303030;
+                    border-radius: 10rpx;
+                    font-weight: bold;
+                }
+                &.disabled {
+                    opacity: 1;
+                    cursor: inherit !important;
+                }
+            }
+            .stepper-btn-view {
+                .stepper-reduce, .stepper-addition {
+                    position: relative;
+                    width: 60rpx;
+                    height: 28rpx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .stepper-icon {
+                        font-size: 22rpx;
+                        font-weight: bold;
+                    }
+                    &:not(.disabled):active {
+                        transform: translate(.5px, .5px);
+                    }
+                    &.disabled {
+                        opacity: 0.4;
+                        cursor: not-allowed;
+                    }
+                }
+                .stepper-addition {
+                    border-radius: 10rpx 10rpx 0 0;
+                }
+                .stepper-reduce {
+                    margin-top: 4rpx;
+                    border-radius: 0 0 10rpx 10rpx;
+                }
+            }
+        }
+        &.stepper-theme-default {
+            .ui-stepper {
+                background: #FFFFFF;
+                .stepper-input-view .stepper-input {
+                    color: #3E3E3E;
+                }
+                .stepper-btn-view {
+                    .stepper-reduce {
+                        background-color: #FDE7E7;
+                        color: #910C09;
+                    }
+                    .stepper-addition {
+                        background-color: #E2F8E3;
+                        color: #145D17;
+                    }
+                }
+            }
+        }
+        &.stepper-theme-no-bg {
+            .ui-stepper {
+                padding: 0;
+                .stepper-input-view {
+                    background: #FFFFFF;
+                    border: 1rpx solid #B8B7B7;
+                    margin: 0 10rpx 0 0;
+                    height: 78rpx;
+                    width: 140rpx;
+                    .stepper-input {
+                        height:76rpx;
+                        color: #414141;
+                    }
+                }
+                .stepper-btn-view {
+                    .stepper-reduce, .stepper-addition {
+                        height: 38rpx;
+                    }
+                    .stepper-reduce {
+                        background-color: #FDE7E7;
+                        color: #910C09;
+                    }
+                    .stepper-addition {
+                        background-color: #E2F8E3;
+                        color: #145D17;
+                    }
+                }
+            }
+        }
+        &.stepper-theme-grey {
+            .ui-stepper {
+                background-color: #EFEFF0;
+                .stepper-input-view {
+                    background: #FFFFFF;
+                    border: 1rpx solid #BABABA;
+                    .stepper-input {
+                        color: #414141;
+                    }
+                }
+                .stepper-btn-view {
+                    .stepper-reduce {
+                        color: #910A07;
+                    }
+                    .stepper-addition {
+                        color: #145D17;
+                    }
+                }
+            }
+        }
+        &.stepper-theme-blue {
+            .ui-stepper {
+                background-color: #DFEBF9;
+                .stepper-input-view {
+                    background: #FFFFFF;
+                    border: 1rpx solid #7DB3F7;
+                    .stepper-input {
+                        color: #053775;
+                    }
+                }
+                .stepper-reduce {
+                    background-color: #FDE7E7;
+                    color: #910C09;
+                }
+                .stepper-addition {
+                    background-color: #E2F8E3;
+                    color: #145D17;
+                }
+            }
+        }
+    }
+    &.stepper-tpl-4 {
+        .ui-stepper {
+            position: relative;
+            padding: 10rpx;
+            border-radius: 10rpx;
+            .stepper-input-view {
+                position: relative;
+                width: 68rpx;
+                height: 60rpx;
+                margin: 5rpx 0;
+                text-align: center;
+                border-radius: 10rpx;
+                .stepper-input {
+                    width: 66rpx;
+                    height: 58rpx;
+                    margin: 0;
+                    color: #303030;
+                    border-radius: 10rpx;
+                    font-weight: bold;
+                }
+                &.disabled {
+                    opacity: 1;
+                    cursor: inherit !important;
+                }
+            }
+            .stepper-reduce, .stepper-addition {
+                position: relative;
+                width: 68rpx;
+                height: 40rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10rpx;
+                .stepper-icon {
+                    font-size: 24rpx;
+                    font-weight: bold;
+                }
+                &:not(.disabled):active {
+                    transform: translate(.5px, .5px);
+                }
+                &.disabled {
+                    opacity: 0.4;
+                    cursor: not-allowed;
+                }
+            }
+        }
+        &.stepper-theme-default {
+            .ui-stepper {
+                background: #FFFFFF;
+                .stepper-input-view .stepper-input {
+                    color: #3E3E3E;
+                }
+                .stepper-reduce {
+                    background-color: #FDE7E7;
+                    color: #910C09;
+                }
+                .stepper-addition {
+                    background-color: #E2F8E3;
+                    color: #145D17;
+                }
+            }
+        }
+        &.stepper-theme-no-bg {
+            .ui-stepper {
+                .stepper-input-view .stepper-input {
+                    color: #414141;
+                }
+                .stepper-reduce {
+                    background: #FFFFFF;
+                    color: #910A09;
+                }
+                .stepper-addition {
+                    background: #FFFFFF;
+                    color: #145D17;
+                }
+            }
+        }
+        &.stepper-theme-grey {
+            .ui-stepper {
+                background-color: #EFEFF0;
+                .stepper-input-view .stepper-input {
+                    color: #414141;
+                }
+                .stepper-reduce {
+                    background: #FFFFFF;
+                    color: #910A07;
+                }
+                .stepper-addition {
+                    background: #FFFFFF;
+                    color: #145D17;
+                }
+            }
+        }
+        &.stepper-theme-blue {
+            .ui-stepper {
+                background-color: #DFEBF9;
+                .stepper-input-view .stepper-input {
+                    color: #0A3977;
+                }
+                .stepper-reduce {
+                    background: #FFFFFF;
+                    color: #1772EC;
+                }
+                .stepper-addition {
+                    background: #FFFFFF;
+                    color: #1772EC;
+                }
+            }
+        }
+    }
+}

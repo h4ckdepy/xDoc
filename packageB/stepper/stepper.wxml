@@ -1,0 +1,85 @@
+<ui-sys doc title="步进器">
+    <view class="ui-container">
+
+        <ui-title title="默认类型" depth="2" ui="m-2" isIcon/>
+        <view class="m-2 p-3 radius border {{bgA?'bg-' + bgA + '-thin':''}} stepper-content">
+            <view class="color-dot" data-val="bgA" bindtap="tapColorDot"/>
+            <view>
+                <ui-stepper/>
+                <ui-stepper theme="blue"/>
+            </view>
+            <view class="mt-4">
+                <ui-stepper theme="grey"/>
+                <ui-stepper theme="no-bg"/>
+            </view>
+        </view>
+
+        <ui-title title="类型2" depth="2" ui="m-2" isIcon/>
+        <view class="paragraph">此类型下，不会显示输入框。</view>
+        <view class="m-2 p-3 radius border {{bgB?'bg-' + bgB + '-thin':''}} stepper-content">
+            <view class="color-dot" data-val="bgB" bindtap="tapColorDot"/>
+            <view>
+                <ui-stepper tpl="2" />
+                <ui-stepper tpl="2" theme="blue"/>
+            </view>
+            <view class="mt-4">
+                <ui-stepper tpl="2" theme="grey"/>
+                <ui-stepper tpl="2" theme="no-bg"/>
+            </view>
+        </view>
+
+        <ui-title title="类型3" depth="2" ui="m-2" isIcon/>
+        <view class="m-2 p-3 radius border {{bgC?'bg-' + bgC + '-thin':''}} stepper-content">
+            <view class="color-dot" data-val="bgC" bindtap="tapColorDot"/>
+            <view>
+                <ui-stepper tpl="3" />
+                <ui-stepper tpl="3" theme="blue"/>
+            </view>
+            <view class="mt-4">
+                <ui-stepper tpl="3" theme="grey"/>
+                <ui-stepper tpl="3" theme="no-bg"/>
+            </view>
+        </view>
+
+        <ui-title title="类型4" depth="2" ui="m-2" isIcon/>
+        <view class="m-2 p-3 radius border {{bgD?'bg-' + bgD + '-thin':''}} stepper-content">
+            <view class="color-dot" data-val="bgD" bindtap="tapColorDot"/>
+            <ui-stepper tpl="4" />
+            <ui-stepper tpl="4" theme="blue"/>
+            <ui-stepper tpl="4" theme="grey"/>
+            <ui-stepper tpl="4" theme="no-bg"/>
+        </view>
+
+        <ui-title title="其它类型" depth="2" ui="m-2" isIcon/>
+        <view class="m-2 p-3 radius border {{bgE?'bg-' + bgE + '-thin':''}} stepper-content">
+            <view class="color-dot" data-val="bgE" bindtap="tapColorDot"/>
+            <view>当前值：{{val}}</view>
+            <view class="mt-2">
+                <ui-stepper val="{{val}}" maxVal="10" bind:onCut="onCutVal" bind:onAdd="onAddVal" bind:onVal="onVal"/>
+            </view>
+
+            <view class="mt-4">可为负数：{{sval}}</view>
+            <view class="mt-2">
+                <ui-stepper val="{{sval}}" minVal="-10" maxVal="10" noVal bind:onVal="onsVal"/>
+            </view>
+
+            <view class="mt-4">小数点：{{vals}}</view>
+            <view class="mt-2">
+                <ui-stepper val="{{vals}}" maxVal="2" digit bind:onVal="onVals"/>
+            </view>
+
+            <view class="mt-4">小数点：{{valss}}</view>
+            <view class="mt-2">
+                <ui-stepper val="{{valss}}" maxVal="2" digit noVal digits="2" bind:onVal="onValss"/>
+            </view>
+
+        </view>
+
+    </view>
+
+    <view class="mp-ad-container">
+        <view class="shadow">
+            <ad unit-id="adunit-5cbb45ce88fe9fd7"></ad>
+        </view>
+    </view>
+</ui-sys>

@@ -1,0 +1,112 @@
+@import '../../../mp-cu/colorUI/scss/var';
+
+.ui-dot-tag {
+    display: inline-block;
+    color: #FFFFFF;
+    .ui-dot-tag-view {
+        position: relative;
+        display: inline-block;
+        padding: 12rpx 40rpx;
+        background: rgb(0,0,0,0.1);
+        border: 2rpx solid rgb(255,255,255,0.4);
+        border-radius: 1000rpx;
+        &:before {
+            content: '';
+            position: absolute;
+            background: rgb(255,255,255,0.4);
+        }
+        .ui-dot-tag-dot {
+            display: flex;
+            position: absolute;
+            height: 46rpx;
+            width: 46rpx;
+            justify-content: center;
+            align-items: center;
+            background: rgb(0,0,0,0.1);
+            border-radius: 1000rpx;
+            &:before {
+                content: '';
+                height: 20rpx;
+                width: 20rpx;
+                background-color: #ffffff;
+                border-radius: 1000rpx;
+            }
+        }
+    }
+    &.ui-dot-tag-left .ui-dot-tag-view {
+        &:before {
+            width: 46rpx;
+            height: 2rpx;
+            left: -48rpx;
+            top: 30rpx;
+        }
+        .ui-dot-tag-dot {
+            top: 8rpx;
+            left: -80rpx;
+        }
+    }
+    &.ui-dot-tag-top .ui-dot-tag-view {
+        &:before {
+            width: 2rpx;
+            height: 48rpx;
+            top: -48rpx;
+            left: 50%;
+            margin-left: -1rpx;
+        }
+        .ui-dot-tag-dot {
+            left: 50%;
+            top: -80rpx;
+            margin-left: -23rpx;
+        }
+    }
+    &.ui-dot-tag-right .ui-dot-tag-view {
+        &:before {
+            width: 46rpx;
+            height: 2rpx;
+            right: -48rpx;
+            top: 30rpx;
+        }
+        .ui-dot-tag-dot {
+            top: 8rpx;
+            right: -80rpx;
+        }
+    }
+    &.ui-dot-tag-bottom .ui-dot-tag-view {
+        &:before {
+            width: 2rpx;
+            height: 48rpx;
+            bottom: -48rpx;
+            left: 50%;
+            margin-left: -1rpx;
+        }
+        .ui-dot-tag-dot {
+            left: 50%;
+            bottom: -80rpx;
+            margin-left: -23rpx;
+        }
+    }
+    &.sm {
+        transform: scale(0.8);
+        margin: 0 0.02em 0 0;
+    }
+    &.lg {
+        font-size: calc(#{map-get($fontsize, lg)}rpx + var(--textSize)) !important;
+    }
+    &.xl {
+        font-size: calc(#{map-get($fontsize, xl)}rpx + var(--textSize)) !important;
+    }
+    &.xxl {
+        font-size: calc(#{map-get($fontsize, xxl)}rpx + var(--textSize)) !important;
+    }
+    &.ui-dot-tag-animation .ui-dot-tag-dot:before {
+        animation: ui-dot-tag-dot-frames 3s infinite ease-in-out;
+    }
+    @keyframes ui-dot-tag-dot-frames {
+        0%, 100% {
+            transform: scale(0.7);
+        }
+        50% {
+            transform: scale(1);
+        }
+    }
+}

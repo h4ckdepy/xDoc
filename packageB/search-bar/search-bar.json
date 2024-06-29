@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ui-search-bar" : "/packageB/components/ui-search-bar/ui-search-bar"
+  }
+}

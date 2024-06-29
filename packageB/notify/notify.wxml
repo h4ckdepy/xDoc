@@ -1,0 +1,64 @@
+<ui-sys doc title="消息提示">
+
+    <ui-notify bg="{{bgVal}}" icon="{{iconVal}}" msg="{{msgVal}}" show="{{isShow}}" topType="{{topType}}"
+               align="{{alignVal}}" duration="{{duration}}" mask="{{isMask}}" maskBg="{{maskBgVal}}"
+               bind:close="notifyClose" bind:msgTap="notifyMsgTap" bind:maskTap="notifyMaskTap"/>
+
+    <view class="ui-container">
+        <ui-title title="示例效果" depth="2" ui="m-2" isIcon/>
+
+        <ui-menu ui="border radius">
+            <ui-menu-item title="显示关闭" isAction>
+                <ui-switch slot="action" checked="{{isShow}}" bind:change="onShowChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="加icon" isAction>
+                <ui-switch slot="action" checked="{{iconVal}}" bind:change="onIconChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="背景颜色" isAction>
+                <ui-radio-group slot="action" clearable value="{{bgVal}}" bind:change="onBgChange">
+                    <ui-radio label="bg-blue">蓝色</ui-radio>
+                    <ui-radio label="bg-red">红色</ui-radio>
+                    <ui-radio label="bg-green">绿色</ui-radio>
+                </ui-radio-group>
+            </ui-menu-item>
+            <ui-menu-item title="顶部类型" isAction>
+                <ui-radio-group slot="action" clearable value="{{topType}}" bind:change="onTopTypeChange">
+                    <ui-radio label="0">0</ui-radio>
+                    <ui-radio label="1">1</ui-radio>
+                    <ui-radio label="2">2</ui-radio>
+                    <ui-radio label="3">3</ui-radio>
+                </ui-radio-group>
+            </ui-menu-item>
+            <ui-menu-item title="对齐方向" isAction>
+                <ui-radio-group slot="action" clearable value="{{alignVal}}" bind:change="onAlignValChange">
+                    <ui-radio label="left">居左</ui-radio>
+                    <ui-radio label="center">居中</ui-radio>
+                    <ui-radio label="right">居右</ui-radio>
+                </ui-radio-group>
+            </ui-menu-item>
+            <ui-menu-item title="显示遮罩" isAction>
+                <ui-switch slot="action" checked="{{isMask}}" bind:change="onMaskChange"/>
+            </ui-menu-item>
+            <ui-menu-item title="遮罩颜色" isAction>
+                <ui-radio-group slot="action" clearable value="{{maskBgVal}}" bind:change="onMaskBgChange">
+                    <ui-radio label="">无</ui-radio>
+                    <ui-radio label="bg-grey-thin">灰色</ui-radio>
+                    <ui-radio label="bg-green-thin">绿色</ui-radio>
+                </ui-radio-group>
+            </ui-menu-item>
+            <ui-menu-item title="关闭时间" isAction>
+                <ui-radio-group slot="action" clearable value="{{duration}}" bind:change="onDurationChange">
+                    <ui-radio label="0">0</ui-radio>
+                    <ui-radio label="1000">1s</ui-radio>
+                    <ui-radio label="3000">3s</ui-radio>
+                </ui-radio-group>
+            </ui-menu-item>
+        </ui-menu>
+    </view>
+
+    <view class="mp-ad-container">
+        <view class="shadow">
+            <ad unit-id="adunit-5cbb45ce88fe9fd7"></ad>
+        </view>
+    </view>
+</ui-sys>

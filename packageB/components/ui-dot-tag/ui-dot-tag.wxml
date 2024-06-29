@@ -1,0 +1,7 @@
+<view class="ui-dot-tag {{ui}} {{bg}} {{animationVal}} {{position}}" style="{{dotTagStyle}}">
+    <view class="ui-dot-tag-view {{tagUi}}" bindtap="tapDotTag">
+        <block wx:if="{{!name}}"><slot></slot></block>
+        <block wx:else>{{name}}</block>
+        <view class="ui-dot-tag-dot" style="{{dotTagDotStyle}}"/>
+    </view>
+</view>
