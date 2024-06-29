@@ -29,7 +29,7 @@ loginapi : 处理登录逻辑的API
 
 若您是DepyDocs的租户,请先使用个人域名进行流量转发,并追加自己的AccessToken.
 
-例如:[https://a.com] 流量转发至 [https://docs.test.rce.ink/index/openapi?accesstoken=YourToken],然后将https://a.com添入app.js的api处即可.
+例如:[https://a.com] 流量转发至 [https://docs.test.rce.ink/index/openapi?accesstoken=YourToken] 然后将https://a.com添入app.js的api处即可.
 
 AccessToken获取参考API文档,追加逻辑自行实现.
 
